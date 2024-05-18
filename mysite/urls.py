@@ -5,6 +5,5 @@ from django.utils.translation import gettext_lazy as _
 
 urlpatterns = i18n_patterns(
     path(_('admin/'), admin.site.urls),
-    path('rosetta/', include('rosetta.urls')),
     path('', include('journal.urls')),
 )
