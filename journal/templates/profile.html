@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">{% trans "Профіль" %}</h1>
+    <h4>{% trans "Ім'я" %}: {{ userStudent.first_name }}</h4>
+    <h4>{% trans "Прізвище" %}: {{ userStudent.last_name }}</h4>
+    <h4>Email: {{ userStudent.email }}</h4>
+    
+    {% if course_details.items %}
+        <h2 class="mt-4">{% trans "Курси" %}</h2>
+    {% endif %}
+    {% for course, details in course_details.items %}
+        <h5><a href="{% url 'course_detail' course.id %}">{{ course.title }}</a></h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>{% trans "Заняття" %}</th>
+                    <th>{% trans "Дата" %}</th>
+                    <th>{% trans "Оцінка" %}</th>
+                    {% if is_teacher %}
+                        <th>{% trans "Змінити оцінку" %}</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for lesson in details.lessons %}
+                    <tr>
+                        <td>{{ lesson.title }}</td>
+                        <td>{{ lesson.schedule|date:"Y-m-d H:i" }}</td>
+                        <td>
+                            {% if details.grades|get_item:lesson %}
+                                {{ details.grades|get_item:lesson }}
+                            {% else %}
+                                {% trans "Оцінки ще немає" %}
+                            {% endif %}
+                        </td>
+                        {% if is_teacher %}
+                            <td>
+                                <form method="post" action="{% url 'view_profile' user_id=userStudent.id %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="lesson" value="{{ lesson.id }}">
+                                    <input type="hidden" name="student" value="{{ profile.id }}">
+                                    <input type="number" name="grade" min="0" max="100" value="{{ details.grades|get_item:lesson }}" required>
+                                    <button type="submit" class="btn btn-primary">{% trans "Змінити" %}</button>
+                                </form>
+                            </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    {% endfor %}
+    
+    {% if request.user == userStudent %}
+        <h2 class="mt-4">{% trans "Змінити дані" %}</h2>
+        <ul>
+            <li><a href="{% url 'update_profile' user_id=userStudent.id %}">{% trans "Змінити профіль" %}</a></li>
+            <li><a href="{% url 'change_password' user_id=userStudent.id %}">{% trans "Змінити пароль" %}</a></li>
+        </ul>
+    {% endif %}
+</div>
+{% endblock %}

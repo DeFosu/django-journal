@@ -1,0 +1,217 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-18 13:08+0300\n"
+"PO-Revision-Date: 2024-05-16 11:12+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+msgid "Ім'я"
+msgstr "Name"
+
+msgid "Прізвище"
+msgstr "Nachname"
+
+msgid "Електронна пошта"
+msgstr "E-Mail"
+
+msgid "Обов'язкове поле."
+msgstr "Pflichtfeld."
+
+msgid "Ім'я користувача"
+msgstr "Benutzername"
+
+msgid "Пароль"
+msgstr "Passwort"
+
+msgid "Name of the course"
+msgstr "Kursname"
+
+msgid "Опис курсу"
+msgstr "Kursbeschreibung"
+
+msgid "Викладач"
+msgstr "Lehrer"
+
+msgid "Курс"
+msgstr "Kurs"
+
+msgid "Курси"
+msgstr "Kurse"
+
+msgid "Студент"
+msgstr "Student"
+
+msgid "Роль користувача"
+msgstr "Benutzerrolle"
+
+msgid "Профіль"
+msgstr "Profil"
+
+msgid "Профілі"
+msgstr "Profile"
+
+msgid "Запис на курс"
+msgstr "Kursanmeldung"
+
+msgid "Записи на курси"
+msgstr "Kursanmeldungen"
+
+msgid "Назва заняття"
+msgstr "Lektionsname"
+
+msgid "Опис заняття"
+msgstr "Lektionenbeschreibung"
+
+msgid "Час проведення"
+msgstr "Zeitplan"
+
+msgid "Заняття"
+msgstr "Lektion"
+
+msgid "Оцінка"
+msgstr "Bewertung"
+
+msgid "Оцінки"
+msgstr "Bewertungen"
+
+msgid "Додати урок"
+msgstr "Lektion hinzufügen"
+
+msgid "Додати студента"
+msgstr "Student hinzufügen"
+
+msgid "Виберіть студента"
+msgstr "Student auswählen"
+
+msgid "Додати"
+msgstr "Hinzufügen"
+
+msgid "Редагувати"
+msgstr "Bearbeiten"
+
+msgid "Видалити"
+msgstr "Löschen"
+
+msgid "Оцінити студента"
+msgstr "Student bewerten"
+
+msgid "Зберегти оцінку"
+msgstr "Bewertung speichern"
+
+msgid "Керувати курсом"
+msgstr "Kurs verwalten"
+
+msgid "Додати заняття"
+msgstr "Lektion hinzufügen"
+
+msgid "Редагувати курс"
+msgstr "Kurs bearbeiten"
+
+msgid "Оцінки студентів"
+msgstr "Studentenbewertungen"
+
+msgid "Функції"
+msgstr "Funktionen"
+
+msgid "Назва курсу"
+msgstr "Kursname"
+
+msgid "Зберегти"
+msgstr "Speichern"
+
+msgid "Редагувати заняття"
+msgstr "Lektion bearbeiten"
+
+msgid "Мої курси"
+msgstr "Meine Kurse"
+
+msgid "У вас немає курсів."
+msgstr "Sie haben keine Kurse."
+
+msgid "Вітаю"
+msgstr "Willkommen"
+
+msgid "Вийти"
+msgstr "Abmelden"
+
+msgid "Змінити пароль"
+msgstr "Passwort ändern"
+
+msgid "Старий пароль"
+msgstr "Altes Passwort"
+
+msgid "Новий пароль"
+msgstr "Neues Passwort"
+
+msgid "Підтвердження нового паролю"
+msgstr "Neues Passwort bestätigen"
+
+msgid "Дата"
+msgstr "Datum"
+
+msgid "Змінити оцінку"
+msgstr "Bewertung ändern"
+
+msgid "Оцінки ще немає"
+msgstr "Noch keine Bewertungen"
+
+msgid "Змінити"
+msgstr "Ändern"
+
+msgid "Змінити дані"
+msgstr "Details ändern"
+
+msgid "Змінити профіль"
+msgstr "Profil ändern"
+
+msgid "Авторизація"
+msgstr "Anmeldung"
+
+msgid "Увійти"
+msgstr "Anmelden"
+
+msgid "Реєстрація"
+msgstr "Registrierung"
+
+msgid "Зареєструватися"
+msgstr "Registrieren"
+
+msgid "You are not the teacher of this course."
+msgstr "Sie sind nicht der Lehrer dieses Kurses."
+
+msgid "Only the teacher of this course can add lessons."
+msgstr "Nur der Lehrer dieses Kurses kann Lektionen hinzufügen."
+
+msgid "Only the teacher of this course can edit it."
+msgstr "Nur der Lehrer dieses Kurses kann ihn bearbeiten."
+
+msgid "Only the teacher of this course can add students."
+msgstr "Nur der Lehrer dieses Kurses kann Studenten hinzufügen."
+
+msgid "Only the teacher of this lesson can edit it."
+msgstr "Nur der Lehrer dieser Lektion kann sie bearbeiten."
+
+msgid "Only the teacher of this lesson can delete it."
+msgstr "Nur der Lehrer dieser Lektion kann sie löschen."
+
+msgid "Ukraine"
+msgstr "Ukraine"
+
+msgid "English"
+msgstr "Englisch"
+
+msgid "Germany"
+msgstr "Deutschland"
+
+
+
+msgid "Ви адміністратор!"
+msgstr "Sie sind Administrator!"

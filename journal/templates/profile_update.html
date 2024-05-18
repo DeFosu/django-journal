@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div class="d-flex flex-column align-items-center">
+    <h1 class="text-center">{% trans "Змінити профіль" %}</h1>
+    <form method="post" class="mt-3 w-50 d-flex flex-column">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ user_form.username.label_tag }}
+            <input type="text" name="{{ user_form.username.name }}" class="form-control" placeholder="{% trans "Ім'я користувача" %}" value="{{ user_form.username.value }}">
+            {% if user_form.username.errors %}
+                <div class="text-danger">
+                    {{ user_form.username.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            {{ user_form.first_name.label_tag }}
+            <input type="text" name="{{ user_form.first_name.name }}" class="form-control" placeholder="{% trans "Ім'я" %}" value="{{ user_form.first_name.value }}">
+            {% if user_form.first_name.errors %}
+                <div class="text-danger">
+                    {{ user_form.first_name.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            {{ user_form.last_name.label_tag }}
+            <input type="text" name="{{ user_form.last_name.name }}" class="form-control" placeholder="{% trans "Прізвище" %}" value="{{ user_form.last_name.value }}">
+            {% if user_form.last_name.errors %}
+                <div class="text-danger">
+                    {{ user_form.last_name.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <button type="submit" class="btn btn-primary">{% trans "Зберегти" %}</button>
+    </form>
+</div>
+{% endblock %}
+
+

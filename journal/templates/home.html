@@ -1,0 +1,19 @@
+<!-- home.html -->
+{% extends 'layout.html' %}
+{% load i18n %}
+{% block content %}
+<div class="container">
+  {% if courses %}
+    <h1 class="mt-5">{% trans "Мої курси" %}</h1>
+    <ul class="list-group mt-3">
+      {% for course in courses %}
+        <li class="list-group-item">
+          <a href="{% url 'course_detail' course.id %}">{{ course.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="mt-5">{% trans "У вас немає курсів." %}</p>
+  {% endif %}
+</div>
+{% endblock %}

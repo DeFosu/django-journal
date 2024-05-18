@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="d-flex flex-column align-items-center">
+  <h3 class="mt-5">{% trans "Додати студента" %}</h3>
+  <form method="post" action="{% url 'add_student' course.id %}" class="mt-4 w-50">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="id_student" class="form-label">{% trans "Виберіть студента" %}</label>
+      <select name="student" id="id_student" class="form-control mb-3" aria-label="Select student">
+        {% for choice in form.student.field.choices %}
+        <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <button type="submit" class="btn btn-success btn-block">{% trans "Додати" %}</button>
+  </form>
+</div>
+{% endblock %}

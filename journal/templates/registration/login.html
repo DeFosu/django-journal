@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="d-flex flex-column align-items-center">
+  <h1 class="mt-5">{% trans "Авторизація" %}</h1>
+  <form method="post" class="mt-3 w-50 d-flex flex-column">
+    {% csrf_token %}
+    <div class="mb-3">
+      {{ form.username.label_tag }}
+      <input type="text" name="{{ form.username.name }}" class="form-control" placeholder="{% trans "Ім'я користувача" %}">
+      {% if form.username.errors %}
+        <div class="text-danger">
+          {{ form.username.errors }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="mb-3">
+      {{ form.password.label_tag }}
+      <input type="password" name="{{ form.password.name }}" class="form-control" placeholder="********">
+      {% if form.password.errors %}
+        <div class="text-danger">
+          {{ form.password.errors }}
+        </div>
+      {% endif %}
+    </div>
+    {% if form.non_field_errors %}
+      <div class="text-danger mb-3">
+        {{ form.non_field_errors }}
+      </div>
+    {% endif %}
+    <div class="mb-3">
+        <a href="{% url 'register' %}" class="nav-link">Реєстрація</a>
+    </div>
+    <button type="submit" class="btn btn-primary">{% trans "Увійти" %}</button>
+  </form>
+</div>
+{% endblock %}

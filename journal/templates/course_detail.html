@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+
+{% block content %}
+<div class="container">
+    <h1>{{ course.title }}</h1>
+    <p>{{ course.description }}</p>
+
+    <h2>{% trans "Заняття" %}</h2>
+    <div id="accordion">
+        {% for lesson in lessons %}
+        <div class="card">
+            <div class="card-header" id="heading{{ lesson.id }}">
+                <h5 class="mb-0">
+                    <button class="btn btn-link d-flex justify-content-between w-100" data-toggle="collapse" data-target="#collapse{{ lesson.id }}" aria-expanded="true" aria-controls="collapse{{ lesson.id }}">
+                        <div>{{ lesson.title }}</div><div>{{ lesson.schedule }}</div>
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapse{{ lesson.id }}" class="collapse" aria-labelledby="heading{{ lesson.id }}" data-parent="#accordion">
+                <div class="card-body">
+                    <p>{{ lesson.description }}</p>
+                   
+                    {% if is_teacher %}
+                        <a href="{% url 'edit_lesson' lesson.id %}" class="btn btn-sm btn-primary">{% trans "Редагувати" %}</a>
+                        <a href="{% url 'delete_lesson' lesson.id %}" class="btn btn-sm btn-danger">{% trans "Видалити" %}</a>
+
+                        <h3 class="mt-4">{% trans "Оцінити студента" %}</h3>
+                        <form method="post" action="{% url 'course_detail' course.id %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="lesson_id" value="{{ lesson.id }}">
+                            <div class="form-group">
+                                <label for="student">{% trans "Студент" %}</label>
+                                <select class="form-control" id="student" name="student_id">
+                                    {% for enrollment in enrollments %}
+                                    <option value="{{ enrollment.student.id }}">{{ enrollment.student.user.first_name }} {{ enrollment.student.user.last_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="grade">{% trans "Оцінка" %}</label>
+                                <input type="number" class="form-control" id="grade" name="grade" min="0" max="100" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">{% trans "Зберегти оцінку" %}</button>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if is_teacher %}
+        <h2 class="mt-4">{% trans "Керувати курсом" %}</h2>
+        <a href="{% url 'add_lesson' course.id %}" class="btn btn-primary">{% trans "Додати заняття" %}</a>
+        <a href="{% url 'edit_course' course.id %}" class="btn btn-secondary">{% trans "Редагувати курс" %}</a>
+        <a href="{% url 'add_student' course.id %}" class="btn btn-secondary">{% trans "Додати студента" %}</a>
+    {% endif %}
+
+    {% if is_teacher %}
+    <h2 class="mt-4">{% trans "Оцінки студентів" %}</h2>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>{% trans "Студент" %}</th>
+                    {% for lesson in lessons %}
+                    <th>{{ lesson.title }}</th>
+                    {% endfor %}
+                    <th>{% trans "Функції" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for enrollment in enrollments %}
+                <tr>
+                    <td>{{ enrollment.student.user.first_name }} {{ enrollment.student.user.last_name }}</td>
+                    {% for lesson in lessons %}
+                    <td>
+                        {% with grade=grades|get_item:enrollment.student.id|get_item:lesson.id %}
+                        {% if grade %}
+                            {{ grade.grade }}
+                        {% else %}
+                            -
+                        {% endif %}
+                        {% endwith %}
+                    </td>
+                    {% endfor %}
+                    <td>
+                        <a href="{% url 'remove_student' course_id=course.id enrollment_id=enrollment.id %}" class="btn btn-danger">{% trans "Видалити" %}</a>
+                        <a href="{% url 'view_profile' user_id=enrollment.student.user.id %}" class="btn btn-info">{% trans "Профіль" %}</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    {% endif %}
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

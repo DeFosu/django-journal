@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="d-flex flex-column align-items-center">
+  <h1 class="mt-5">{% trans "Додати урок" %}</h1>
+  <form method="post" class="mt-3 w-50 d-flex flex-column">
+    {% csrf_token %}
+    <div class="mb-3">
+      {{ form.title.label_tag }}
+      <input type="text" name="{{ form.title.name }}" class="form-control" placeholder="{% trans "Назва заняття" %}">
+    </div>
+    <div class="mb-3">
+      {{ form.description.label_tag }}
+      <textarea name="{{ form.description.name }}" class="form-control" placeholder="{% trans "Опис заняття" %}" rows="5"></textarea>
+    </div>
+    <div class="mb-3">
+      {{ form.schedule.label_tag }}
+      <input type="datetime-local" name="{{ form.schedule.name }}" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary d-flex justify-content-center">{% trans "Додати урок" %}</button>
+  </form>
+</div>
+{% endblock %}

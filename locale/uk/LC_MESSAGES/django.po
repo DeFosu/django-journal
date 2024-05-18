@@ -1,0 +1,220 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-18 13:08+0300\n"
+"PO-Revision-Date: 2024-05-16 11:12+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+msgid "Ім'я"
+msgstr "Ім'я"
+
+msgid "Прізвище"
+msgstr "Прізвище"
+
+msgid "Електронна пошта"
+msgstr "Електронна пошта"
+
+msgid "Обов'язкове поле."
+msgstr "Обов'язкове поле."
+
+msgid "Ім'я користувача"
+msgstr "Ім'я користувача"
+
+msgid "Пароль"
+msgstr "Пароль"
+
+msgid "Name of the course"
+msgstr "Назва курсу"
+
+msgid "Опис курсу"
+msgstr "Опис курсу"
+
+msgid "Викладач"
+msgstr "Викладач"
+
+msgid "Курс"
+msgstr "Курс"
+
+msgid "Курси"
+msgstr "Курси"
+
+msgid "Студент"
+msgstr "Студент"
+
+msgid "Роль користувача"
+msgstr "Роль користувача"
+
+msgid "Профіль"
+msgstr "Профіль"
+
+msgid "Профілі"
+msgstr "Профілі"
+
+msgid "Запис на курс"
+msgstr "Запис на курс"
+
+msgid "Записи на курси"
+msgstr "Записи на курси"
+
+msgid "Назва заняття"
+msgstr "Назва заняття"
+
+msgid "Опис заняття"
+msgstr "Опис заняття"
+
+msgid "Час проведення"
+msgstr "Час проведення"
+
+msgid "Заняття"
+msgstr "Заняття"
+
+msgid "Оцінка"
+msgstr "Оцінка"
+
+msgid "Оцінки"
+msgstr "Оцінки"
+
+msgid "Додати урок"
+msgstr "Додати урок"
+
+msgid "Додати студента"
+msgstr "Додати студента"
+
+msgid "Виберіть студента"
+msgstr "Виберіть студента"
+
+msgid "Додати"
+msgstr "Додати"
+
+msgid "Редагувати"
+msgstr "Редагувати"
+
+msgid "Видалити"
+msgstr "Видалити"
+
+msgid "Оцінити студента"
+msgstr "Оцінити студента"
+
+msgid "Зберегти оцінку"
+msgstr "Зберегти оцінку"
+
+msgid "Керувати курсом"
+msgstr "Керувати курсом"
+
+msgid "Додати заняття"
+msgstr "Додати заняття"
+
+msgid "Редагувати курс"
+msgstr "Редагувати курс"
+
+msgid "Оцінки студентів"
+msgstr "Оцінки студентів"
+
+msgid "Функції"
+msgstr "Функції"
+
+msgid "Назва курсу"
+msgstr "Назва курсу"
+
+msgid "Зберегти"
+msgstr "Зберегти"
+
+msgid "Редагувати заняття"
+msgstr "Редагувати заняття"
+
+msgid "Мої курси"
+msgstr "Мої курси"
+
+msgid "У вас немає курсів."
+msgstr "У вас немає курсів."
+
+msgid "Вітаю"
+msgstr "Вітаю"
+
+msgid "Вийти"
+msgstr "Вийти"
+
+msgid "Змінити пароль"
+msgstr "Змінити пароль"
+
+msgid "Старий пароль"
+msgstr "Старий пароль"
+
+msgid "Новий пароль"
+msgstr "Новий пароль"
+
+msgid "Підтвердження нового паролю"
+msgstr "Підтвердження нового паролю"
+
+msgid "Дата"
+msgstr "Дата"
+
+msgid "Змінити оцінку"
+msgstr "Змінити оцінку"
+
+msgid "Оцінки ще немає"
+msgstr "Оцінки ще немає"
+
+msgid "Змінити"
+msgstr "Змінити"
+
+msgid "Змінити дані"
+msgstr "Змінити дані"
+
+msgid "Змінити профіль"
+msgstr "Змінити профіль"
+
+msgid "Авторизація"
+msgstr "Авторизація"
+
+msgid "Увійти"
+msgstr "Увійти"
+
+msgid "Реєстрація"
+msgstr "Реєстрація"
+
+msgid "Зареєструватися"
+msgstr "Зареєструватися"
+
+msgid "You are not the teacher of this course."
+msgstr "Ви не є викладачем цього курсу."
+
+msgid "Only the teacher of this course can add lessons."
+msgstr "Лише викладач цього курсу може додавати заняття."
+
+msgid "Only the teacher of this course can edit it."
+msgstr "Лише викладач цього курсу може його редагувати."
+
+msgid "Only the teacher of this course can add students."
+msgstr "Лише викладач цього курсу може додавати студентів."
+
+msgid "Only the teacher of this lesson can edit it."
+msgstr "Лише викладач цього заняття може його редагувати."
+
+msgid "Only the teacher of this lesson can delete it."
+msgstr "Лише викладач цього заняття може його видалити."
+
+msgid "Ukraine"
+msgstr "Українська"
+
+msgid "English"
+msgstr "Англійська"
+
+msgid "Germany"
+msgstr "Німеччина"
+
+
+
+msgid "Ви адміністратор!"
+msgstr "Ви адміністратор!"
