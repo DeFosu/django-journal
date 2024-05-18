@@ -148,6 +148,19 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+MEDIA_ROOT = '/home/defosu/journaltemp/media'
+MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/defosu/journaltemp/static'
+STATIC_URL = '/static/'
+
+
+
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale/',
