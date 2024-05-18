@@ -1,26 +1,3 @@
-Instruction
-1. Develop the user interface for GRUD (create, read, update, delete) operations in your project database. Your application should use several webpages with a content according to the subject area. These web-pages should use Django Template Language, CSS styles and CSS framework Bootstrap.
-All elements of the interface should be presented in Ukrainian and English.
-Use Function-based Views and Class-based Views in Django for user interface developing.
-
-Instruction
-1. Continue developing the application from the previous laboratory
-works:
-Subsystem of authentication and authorization should provide such
-functionality:
-• self-registration of new users;
-• checking login and password when a user is signing in;
-• providing the registered users with possibility to change the own password or login;
-• providing roles of administrator, manager and ordinary user with different database access permissions for the registered user;
-• only a user with manager access should be able to insert, update and
-delete data in the database;
-• only a user with administrator access should be able to edit the user accounts and grant roles (administrator, manager or ordinary user);
-• monitoring and saving to files or database the entrance time and session duration for ordinary users and managers separately for each user.
-2. Provide a user with possibility to change the interface language (1-
-Ukrainian as default language, 2 - English and 3 - additional language of the
-student’s own choice) during the session. 
-Internationalization should be done in the source code of Models,
-Views, Templates.
-3. Deploy your application on web-hosting with Python and Django
-support, for example Heroku, DigitalOcean, PythonAnywhere etc. Upload to
-PNS the report file with a link to your application.
+pip install django-rosetta
+pip install rosetta
+pip install django-parler
